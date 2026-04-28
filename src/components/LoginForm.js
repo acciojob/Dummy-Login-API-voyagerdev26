@@ -1,6 +1,7 @@
 import React,{useState,useRef} from "react";
 
-const LoginForm=({data,setPassCheck,setEmailCheck})=>{
+// const LoginForm=({data,setPassCheck,setEmailCheck})=>{
+const LoginForm=({data,setEmailCheck})=>{
   let emailRef= useRef("");
   let passRef= useRef("");
 
@@ -16,8 +17,9 @@ const LoginForm=({data,setPassCheck,setEmailCheck})=>{
       }
       else if(obj.email===emailRef.current.value.trim() && obj.password!==passRef.current.value.trim()){
         setTimeout(()=>{console.log("Password incorrect")},3000);
-        setPassCheck(true);
+        // setPassCheck(true);
         setPassErr(true);
+        setEmailCheck(true);
         flag=true;
       }
     })

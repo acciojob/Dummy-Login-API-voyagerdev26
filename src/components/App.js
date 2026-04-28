@@ -6,7 +6,7 @@ import LoginForm from "./LoginForm";
 const App = () => {
 
   let [emailCheck,setEmailCheck]=useState(false);
-  let [passCheck,setPassCheck]=useState(false);
+  // let [passCheck,setPassCheck]=useState(false);
 
   let data= [
     {
@@ -30,9 +30,10 @@ const App = () => {
  ]
   return (
     <div>
-        <LoginForm data={data} setPassCheck={setPassCheck} setEmailCheck={setEmailCheck}/>
+        {/* <LoginForm data={data} setPassCheck={setPassCheck} setEmailCheck={setEmailCheck}/> */}
+        <LoginForm data={data} setEmailCheck={setEmailCheck}  />
         {emailCheck && <p id="user-error">User not found</p>}
-        {passCheck && <p id="password-error">Password Incorrect</p>}
+        {/* {passCheck && <p id="password-error">Password Incorrect</p>} */}
     </div>
   )
 }
